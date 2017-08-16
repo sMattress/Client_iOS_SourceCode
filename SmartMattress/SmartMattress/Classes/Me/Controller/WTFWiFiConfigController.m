@@ -50,9 +50,7 @@
 }
 
 - (void)confirmAction {
-    
-    if ([self.wifiPwdField.text isValidateWiFiPassword]) {
-        
+
         // 传入WiFi密码
         [LiteSimpleConfig setWiFiPassword:self.wifiPwdField.text];
         
@@ -65,9 +63,7 @@
             [self.navigationController pushViewController:loadingVC animated:YES];
         }
         
-    } else {
-        [SVProgressHUD showErrorWithStatus:@"请输入正确的WiFi密码!"];
-    }
+
     
 }
 
